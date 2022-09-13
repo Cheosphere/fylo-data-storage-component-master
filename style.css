@@ -1,0 +1,274 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --very-dark-blue-soft: hsla(229, 57%, 11%, 0.5);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--very-dark-blue);
+    background-image: url(images/bg-desktop.png);
+    background-size: 100vw 52.5vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+/* ESTILOS CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub_container {
+    width: 95%;
+    max-width: 920px;
+    height: 201px;
+    margin-bottom: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    transition: all .4s linear;
+}
+
+/* ESTILOS ÁREA HERRAMIENTAS */
+.tools_area {
+    min-width: 280px;
+    max-width: 350px;
+    height: 201px;
+    padding: 1.6rem 2.55rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px 100px 10px 10px;
+    background-color: var(--dark-blue);
+    box-shadow: 40px 80px 100px -2px rgba(0, 0, 0, 0.2);
+    transition: all .4s linear;
+}
+
+.tools_area_logo {
+    width: 100%;
+}
+
+.tools_area_icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--very-dark-blue);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.tools_area_icon:hover {
+    transform: rotate(10deg) scale(1.18);
+}
+
+/* ESTILOS ÁREA DE ALMACENAMIENTO */
+.storage_area {
+    max-width: 540px;
+    width: 100%;
+    margin-left: 1rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.storage_area_data {
+    max-width: 540px;
+    width: 100%;
+    height: 153px;
+    padding: 2.35rem 2.5rem;
+    border-radius: 10px;
+    background-color: var(--dark-blue);
+    box-shadow: 40px 80px 100px -2px rgba(0, 0, 0, 0.2);
+    transition: all .4s linear;
+}
+
+.storage_area_data_title {
+    margin-bottom: .95rem;
+    font-size: .88rem;
+    font-weight: 100;
+    letter-spacing: 0.008rem;
+    opacity: .9;
+}
+
+.storage_area_data_title span {
+    font-size: .88rem;
+    font-weight: 500;
+}
+
+.storage_area_data_bar {
+    width: 99.8%;
+    height: 20px;
+    padding: 3px;
+    margin-bottom: 7px;
+    border-radius: 20px;
+    background-color: var(--very-dark-blue-soft);
+}
+
+.storage_area_data_bar_color {
+    width: 74.8%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 20px;
+    background-image: linear-gradient(45deg,
+            hsl(6deg 100% 80%) 0%,
+            hsl(351deg 100% 74%) 50%,
+            hsl(335deg 100% 65%) 100%);
+}
+
+.storage_area_data_minmax {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    opacity: .9;
+}
+
+.storage_area_data_bar_point {
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+    margin-bottom: .8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.storage_area_data_popup {
+    width: 179px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    border-radius: 10px 10px 0 10px;
+    background-color: white;
+    transition: all .25s ease-in-out;
+}
+
+.storage_area_data_popup:hover {
+    transform: scale(1.15) rotate(10deg);
+}
+
+.storage_area_data_popup h2 {
+    margin-right: .6rem;
+    font-size: 2.5rem;
+    color: var(--very-dark-blue);
+}
+
+.storage_area_data_popup h3 {
+    margin-top: 2px;
+    font-size: .78rem;
+    font-weight: 500;
+    letter-spacing: .045rem;
+    color: var(--grayish-blue);
+}
+
+.storage_area_data_popup_triangle {
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-bottom: 24px solid white;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 57.5px;
+    right: -12px;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+
+    body {
+        background-image: url(images/bg-mobile.png);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .container {
+        height: 667px;
+    }
+
+    .sub_container {
+        width: 90%;
+        height: auto;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tools_area {
+        width: 100%;
+        max-width: 600px;
+        height: 201px;
+        padding: 1.6rem 2.55rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-radius: 10px 100px 10px 10px;
+        background-color: var(--dark-blue);
+    }
+
+    .storage_area {
+        max-width: none;
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .storage_area_data {
+        max-width: 600px;
+        width: 100%;
+        height: 160px;
+        padding: 2rem 2rem;
+        margin-top: 1rem;
+        background-color: var(--dark-blue);
+    }
+
+    .storage_area_data_popup {
+        position: relative;
+        top: 17px;
+        right: 0;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .storage_area_data_popup_triangle {
+        display: none;
+    }
+
+}
