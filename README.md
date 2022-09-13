@@ -5,6 +5,8 @@ El desafío es desarrollar este componente de almacenamiento de datos y lograr q
 - HTML
 - CSS
 
+![desktop-design](https://user-images.githubusercontent.com/112582420/190022544-f97f60e0-3950-48dd-a9a8-49c2d69b6db4.jpg)
+
 # Guía de Estilo
 
 ## Diseño
